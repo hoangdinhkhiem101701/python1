@@ -1,16 +1,13 @@
-import math
+a1,b1,c1 = map(int,input().split())
+a2,b2,c2 = map(int,input().split())
 
-a = int(input())
-b = int(input())
-c = int(input())
-
-delta = b**2 - 4*a*c
-if delta > 0:
-    x1 = (-b + math.sqrt(delta)) / (2 * a)
-    x2 = (-b - math.sqrt(delta)) / (2 * a)
-    print(f"x1 = {x1:.2f}  x2 = {x2:.2f}")
-elif delta == 0:
-    x = -b / (2 * a)
-    print(f"x = {x:.2f}")
+d = a1 * b2 - a2 * b1
+if d != 0:
+    x = (c1 * b2 - c2 * b1) / d
+    y = (a1 * c2 - a2 * c1) / d
+    print(x,y)
 else:
-    print("VN")
+    if a1 * c2 - a2 * c1 != b1 * c2 - b2 * c1:
+        print("VN")
+    else:
+        print("VSN")
