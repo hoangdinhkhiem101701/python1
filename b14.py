@@ -1,7 +1,11 @@
-s = 0
-x = 0
-while(s < 1000):
-    s += x
-    x += 1
-x -= 1
-print(x, s)
+import math
+
+n = int(input())
+a = float(input())
+S = 0
+for i in range(1, 2*n + 1,2):
+    tam=1/i
+    S += 1/math.factorial(i)
+    if tam < a:
+        print(S)
+        break
